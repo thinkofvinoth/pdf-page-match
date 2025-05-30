@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -44,51 +43,35 @@ const PdfCompare = () => {
     const mockResults: ComparisonResult[] = [
       {
         id: '1',
-        section: 'Title Page',
-        sourceContent: 'Annual Report 2023',
-        targetContent: 'Annual Report 2024',
+        section: 'Document ID',
+        sourceContent: '172501642441',
+        targetContent: '172501724587',
         status: 'different',
         similarity: 85
       },
       {
         id: '2',
-        section: 'Executive Summary',
-        sourceContent: 'Revenue increased by 15% compared to previous year...',
-        targetContent: 'Revenue increased by 15% compared to previous year...',
-        status: 'match',
-        similarity: 100
-      },
-      {
-        id: '3',
-        section: 'Financial Overview',
-        sourceContent: 'Total assets: $2.5M, Liabilities: $800K',
-        targetContent: 'Total assets: $3.2M, Liabilities: $900K',
+        section: 'PID',
+        sourceContent: 'QhupDmsci',
+        targetContent: 'SgpLbZVi',
         status: 'different',
         similarity: 70
       },
       {
+        id: '3',
+        section: 'Net Asset Valuation Fee Description',
+        sourceContent: 'The basis point tiering structure is applied to each sub fund\'s net assets subject to a sub fund level minimum fee. The base fee per sub fund is calculated as the greater of the minimum fee or ad valorem (bp) fee, detailed below, based upon the sub fund\'s month-end NAV.',
+        targetContent: 'The basis point tiering structure is applied to the aggregated net assets of the funds. The resulting total basis point fee is then pro-rated to each sub-fund, as a proportion of the aggregate total net assets subject to a sub fund level minimum fee. The calculation is based on month-end NAVs.',
+        status: 'different',
+        similarity: 75
+      },
+      {
         id: '4',
-        section: 'Market Analysis',
-        sourceContent: 'Market share increased in Q4...',
-        targetContent: 'Market share increased in Q4...',
-        status: 'match',
-        similarity: 100
-      },
-      {
-        id: '5',
-        section: 'Future Projections',
-        sourceContent: '',
-        targetContent: 'Expected growth of 20% in the next fiscal year...',
-        status: 'added',
-        similarity: 0
-      },
-      {
-        id: '6',
-        section: 'Risk Assessment',
-        sourceContent: 'Key risks include market volatility...',
-        targetContent: '',
-        status: 'missing',
-        similarity: 0
+        section: 'Ad Valorem Fee Table',
+        sourceContent: 'From To BPS\n0 50,000 51\n50,000 100,000 11\n100,000 150,000 50',
+        targetContent: 'From To BPS\n0 50,000 5',
+        status: 'different',
+        similarity: 60
       }
     ];
     
